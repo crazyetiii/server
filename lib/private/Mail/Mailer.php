@@ -32,6 +32,7 @@ use OCP\Defaults;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IURLGenerator;
+use OCP\L10N\IFactory;
 use OCP\Mail\IAttachment;
 use OCP\Mail\IEMailTemplate;
 use OCP\Mail\IMailer;
@@ -144,7 +145,7 @@ class Mailer implements IMailer {
 		return new EMailTemplate(
 			$this->defaults,
 			$this->urlGenerator,
-			$this->l10n,
+			$this->l10nFactory,
 			$emailId,
 			$data
 		);
